@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminaBeauty - Radiant Beauty</title>
+    <nav>
+    </nav>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="circles" id="circles"></div>
+
+    <section class="hero">
+        <img src="image.png" alt="LuminaBloom Beauty" class="hero-image">
+        <h1>LuminaBeauty</h1>
+        <p>Unveil Your Radiant Beauty with LuminaBeauty. Discover our curated collection of natural beauty products designed to enhance your inner glow.</p>
+        <button id="exploreButton">Explore Our Products</button>
+    </section>
+
+    <section class="section">
+        <h2>Our Story: Naturally Beautiful</h2>
+        <p>LuminaBeauty is dedicated to creating beauty products that enhance your natural radiance. We believe in the power of pure ingredients and sustainable practices. Our mission is to empower you to feel confident and beautiful in your own skin. Every product is crafted with care, using only the finest botanicals and extracts, ensuring your beauty routine is as pure and natural as possible.</p>
+    </section>
+
+    <section class="section">
+        <h2>Why LuminaBeauty Shines</h2>
+        <ul>
+            <li>Premium Natural Ingredients</li>
+            <li>Cruelty-Free & Sustainable</li>
+            <li>Expertly Formulated for All Skin Types</li>
+            <li>Luxurious, Long-Lasting Results</li>
+            <li>Exceptional Customer Care</li>
+            <li>Eco-Friendly Packaging</li>
+            <li>Handcrafted with Love</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>The LuminaBeauty Difference</h2>
+        <p>LuminaBloom products are more than just beauty enhancers; they're an experience. Our unique formulations blend science and nature, delivering products that are both effective and indulgent. We are dedicated to providing products that are good for you and the environment. Join our community and embrace a beauty routine that celebrates your natural radiance.</p>
+    </section>
+
+    <section class="section">
+        <h2>Our Commitment to Sustainability</h2>
+        <p>We are committed to minimizing our environmental footprint. From sourcing sustainable ingredients to using eco-friendly packaging, we strive to make a positive impact on the planet. Our products are not only good for your skin but also good for the earth. We believe in beauty that's conscious and responsible.</p>
+    </section>
+
+    <section class="section">
+        <h2>Join the LuminaBeauty Community</h2>
+        <p>Connect with us and discover a world of natural beauty. Follow us on social media for exclusive updates, beauty tips, and inspiration. Share your LuminaBloom journey with us using #LuminaBloomBeauty. We love to see how our products enhance your natural beauty.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Connect with LuminaBeauty</h2>
+        <p>Phone: +91 123-456-7890</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.querySelectorAll('.product-link').forEach(link => {
+            let timeout;
+            const tooltip = link.querySelector('.tooltip');
+            
+            link.addEventListener('mouseenter', () => {
+                tooltip.classList.add('show-tooltip');
+                timeout = setTimeout(() => {
+                    tooltip.classList.remove('show-tooltip');
+                }, 3000);
+            });
+        
+            link.addEventListener('mouseleave', () => {
+                clearTimeout(timeout);
+                tooltip.classList.remove('show-tooltip');
+            });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Male Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="back-button.css">
+    <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="circles" id="circles"></div>
+    <div class="back-button-container">
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <div class="category-container">
+        <h2>Male Categories</h2>
+        <div class="category-grid">
+            <a href="male-dresses.html" class="category-item">
+                <img src="M1.png" alt="Male Dresses">
+                <span>Dresses</span>
+            </a>
+            <a href="male-accessories.html" class="category-item">
+                <img src="M2.png" alt="Male Accessories">
+                <span>Accessories</span>
+            </a>
+            <a href="male-shoes.html" class="category-item">
+                <img src="M3.png" alt="Male Shoes">
+                <span>Shoes</span>
+            </a>
+            <a href="male-slippers.html" class="category-item">
+                <img src="M4.png" alt="Male Slippers">
+                <span>Skincare</span>
+            </a>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
