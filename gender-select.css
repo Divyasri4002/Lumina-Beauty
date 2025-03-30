@@ -1,0 +1,84 @@
+body {
+    font-family: 'Spectral', serif;
+    margin: 0;
+    padding: 0;
+    color: #e8e4c9;
+    background: url('bg.png'); /* Replace with your garden image */
+    background-size: cover;
+    background-position: center;
+    animation: moveBackground 20s linear infinite; /* Move the background */
+}
+
+
+h1 { /* Styles for the Categories heading */
+    text-align: center;
+    color: #d2b48c;
+    font-size: 2.5rem;
+    margin-top: 50px; /* Add top margin for spacing */
+    margin-bottom: 30px; /* Add bottom margin for spacing */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.gender-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 20px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for readability */
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+.gender-option {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gender-option:hover {
+    transform: translateY(-5px);
+}
+
+.gender-option img {
+    max-width: 250px;
+    margin-bottom: 20px;
+    animation: dance 3s infinite alternate;
+}
+
+@keyframes dance {
+    0% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+}
+
+.gender-option button {
+    background-color: #d2b48c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.gender-option button:hover {
+    background-color: #a0522d;
+}
+
+@media (max-width: 768px) {
+    .gender-container {
+        flex-direction: column;
+        padding: 50px 10px;
+    }
+
+    .gender-option img {
+        max-width: 80%;
+    }
+}

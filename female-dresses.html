@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Female Dresses - LuminaBeauty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="back-button.css">
+    
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="circles" id="circles"></div>
+    <div class="back-button-container">
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">LuminaBeauty</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="products.html" class="product-link">Products
+                    <span class="tooltip show-tooltip">Explore more women beauty with Lumina</span>
+                </a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="product-list" id="productList"></section>
+    <footer id="contact">
+        <div class="footer-container">
+            <p>&copy; 2024 LuminaBeauty. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script src="female-dresses.js"></script>
+</body>
+</html>

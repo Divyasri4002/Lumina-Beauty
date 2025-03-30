@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Gender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="back-button.css"> 
+    <link rel="stylesheet" href="gender-select.css">
+</head>
+<body>
+    <h1>Categories</h1>
+    <div class="stars" id="stars"></div>
+    <div class="circles" id="circles"></div>
+    <div class="back-button-container">
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <div class="gender-container">
+        <div class="gender-option" id="male">
+            <img src="ca.png" alt="Male Cartoon">
+            <button>Male</button>
+        </div>
+        <div class="gender-option" id="female">
+            <img src="c2.png" alt="Female Cartoon">
+            <button>Female</button>
+        </div>
+    </div>
+    <script src="gender-select.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
