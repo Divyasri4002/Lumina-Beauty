@@ -67,7 +67,7 @@ body {
 
 .hero {
     text-align: center;
-    padding: 100px 20px; /* Reduced padding */
+    padding: 80px 15px; /* Adjusted padding for mobile */
     position: relative;
     z-index: 1;
     background: rgba(0, 0, 0, 0.1);
@@ -76,10 +76,10 @@ body {
 }
 
 .hero img.hero-image {
-    max-width: 180px; /* Reduced image size */
+    max-width: 150px; /* Adjusted image size for mobile */
     height: auto;
     border-radius: 50%;
-    margin-bottom: 25px; /* Reduced margin */
+    margin-bottom: 20px; /* Adjusted margin for mobile */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
@@ -90,16 +90,16 @@ body {
 
 .hero h1 {
     font-family: 'Dancing Script', cursive;
-    font-size: 4rem; /* Reduced font size */
+    font-size: 3.5rem; /* Adjusted font size for mobile */
     color: #d2b48c;
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 15px; /* Adjusted margin for mobile */
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-    font-size: 1.2rem; /* Reduced font size */
-    margin-bottom: 30px; /* Reduced margin */
+    font-size: 1.1rem; /* Adjusted font size for mobile */
+    margin-bottom: 25px; /* Adjusted margin for mobile */
     font-weight: 600;
     color: #ccc;
 }
@@ -107,10 +107,10 @@ body {
 .hero button {
     background-color: #d2b48c;
     color: white;
-    padding: 16px 30px; /* Reduced padding */
+    padding: 14px 25px; /* Adjusted padding for mobile */
     border: none;
     border-radius: 8px;
-    font-size: 1.1rem; /* Reduced font size */
+    font-size: 1rem; /* Adjusted font size for mobile */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     font-weight: 600;
@@ -122,29 +122,27 @@ body {
     transform: translateY(-3px);
 }
 
-
-
 .section {
-    padding: 80px 20px; /* Reduced padding */
+    padding: 60px 15px; /* Adjusted padding for mobile */
     text-align: center;
 }
 
 .section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem; /* Reduced font size */
+    font-size: 2.3rem; /* Adjusted font size for mobile */
     color: #d2b48c;
-    margin-bottom: 30px; /* Reduced margin */
+    margin-bottom: 25px; /* Adjusted margin for mobile */
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .section p {
-    font-size: 1.1rem; /* Reduced font size */
-    margin: 0 auto 30px; /* Reduced margin */
+    font-size: 1rem; /* Adjusted font size for mobile */
+    margin: 0 auto 25px; /* Adjusted margin for mobile */
     font-weight: 400;
-    max-width: 800px; /* Reduced max-width */
+    max-width: 100%; /* Adjusted max-width for mobile */
     color: #ccc;
-    line-height: 1.7; /* Reduced line-height */
+    line-height: 1.6; /* Adjusted line-height for mobile */
 }
 
 .section ul {
@@ -154,15 +152,15 @@ body {
 }
 
 .section ul li {
-    margin-bottom: 15px; /* Reduced margin */
+    margin-bottom: 12px; /* Adjusted margin for mobile */
     font-weight: 400;
     color: #ccc;
-    font-size: 1rem; /* Reduced font size */
+    font-size: 0.95rem; /* Adjusted font size for mobile */
 }
 
 .contact {
     text-align: center;
-    padding: 80px 20px; /* Reduced padding */
+    padding: 60px 15px; /* Adjusted padding for mobile */
     background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -170,16 +168,16 @@ body {
 
 .contact h2 {
     font-weight: 700;
-    font-size: 2.6rem; /* Reduced font size */
+    font-size: 2.3rem; /* Adjusted font size for mobile */
     color: #d2b48c;
-    margin-bottom: 25px; /* Reduced margin */
+    margin-bottom: 20px; /* Adjusted margin for mobile */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .contact a {
-    margin: 0 12px; /* Reduced margin */
+    margin: 0 10px; /* Adjusted margin for mobile */
     color: #d2b48c;
-    font-size: 1.6rem; /* Reduced font size */
+    font-size: 1.4rem; /* Adjusted font size for mobile */
     transition: color 0.3s ease;
 }
 
@@ -187,44 +185,4 @@ body {
     color: #a0522d;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        padding: 60px 15px;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero img.hero-image {
-        max-width: 150px;
-    }
-
-    .section {
-        padding: 60px 15px;
-    }
-
-    .section h2 {
-        font-size: 2.3rem;
-    }
-
-    .section p, .section ul li {
-        font-size: 1rem;
-    }
-
-    .contact {
-        padding: 60px 15px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .hero h1 {
-        font-size: 4.5rem;
-    }
-    .section h2 {
-        font-size: 3.2rem;
-    }
-    .section p {
-        font-size: 1.2rem;
-    }
-}
+/* No need for @media (min-width: 1200px) in this case as we're focusing on mobile */
