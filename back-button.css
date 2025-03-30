@@ -2,33 +2,52 @@
 
 .back-button-container {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensure it's on top of other elements */
+    top: 10px; /* Reduced top spacing for mobile */
+    left: 10px; /* Reduced left spacing for mobile */
+    z-index: 1000;
 }
 
 .back-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Reduced padding for mobile */
     border: none;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); /* Radiant gradient */
+    border-radius: 6px; /* Slightly smaller border radius for mobile */
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
     color: #fff;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow for mobile */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.9em; /* Reduced font size for mobile */
 }
 
 .back-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px); /* Reduced hover effect for mobile */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Reduced hover shadow for mobile */
 }
 
 .back-button::before {
-    content: '←'; /* Left arrow character */
-    margin-right: 8px;
-    font-size: 1.2em;
+    content: '←';
+    margin-right: 6px; /* Reduced margin for mobile */
+    font-size: 1em; /* Reduced arrow size for mobile */
+}
+
+/* Mobile View Adjustments (Media Query) */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .back-button-container {
+        top: 5px; /* Even smaller top spacing for very small screens */
+        left: 5px; /* Even smaller left spacing for very small screens */
+    }
+
+    .back-button {
+        padding: 6px 12px; /* Further reduced padding for very small screens */
+        font-size: 0.85em; /* Further reduced font size for very small screens */
+    }
+
+    .back-button::before {
+        margin-right: 4px; /* Further reduced margin for very small screens */
+        font-size: 0.9em; /* Further reduced arrow size for very small screens */
+    }
 }
