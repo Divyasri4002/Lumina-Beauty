@@ -1,0 +1,70 @@
+body {
+    font-family: 'Spectral', serif;
+    margin: 0;
+    padding: 0;
+    color: #e8e4c9;
+    background: url('bg.png'); /* Replace with your garden image */
+    background-size: cover;
+    background-position: center;
+    animation: moveBackground 20s linear infinite; /* Move the background */
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.category-container {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #d2b48c;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+.category-item img {
+    max-width: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.category-item span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h2 {
+    color: #d2b48c;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
