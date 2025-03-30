@@ -9,13 +9,12 @@ body {
     animation: moveBackground 20s linear infinite; /* Move the background */
 }
 
-
 h1 { /* Styles for the Categories heading */
     text-align: center;
     color: #d2b48c;
-    font-size: 2.5rem;
-    margin-top: 50px; /* Add top margin for spacing */
-    margin-bottom: 30px; /* Add bottom margin for spacing */
+    font-size: 1.8rem; /* Adjusted font size for mobile */
+    margin-top: 30px; /* Adjusted top margin for mobile */
+    margin-bottom: 20px; /* Adjusted bottom margin for mobile */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -26,28 +25,31 @@ h1 { /* Styles for the Categories heading */
 
 .gender-container {
     display: flex;
-    justify-content: space-around;
-    padding: 100px 20px;
+    flex-direction: column; /* Stack gender options vertically on mobile */
+    justify-content: center; /* Center items vertically */
+    padding: 30px 10px; /* Adjusted padding for mobile */
     align-items: center;
     background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for readability */
     border-radius: 10px;
-    margin: 50px auto;
-    max-width: 1000px;
+    margin: 30px auto; /* Adjusted margin for mobile */
+    max-width: 90%; /* Adjusted max-width for mobile */
 }
 
 .gender-option {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Add margin between gender options on mobile */
 }
 
 .gender-option:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Reduced hover effect for mobile */
 }
 
 .gender-option img {
-    max-width: 250px;
-    margin-bottom: 20px;
+    max-width: 40%; /* Even smaller image size for mobile */
+    height: auto; /* Ensure images maintain aspect ratio */
+    margin-bottom: 15px; /* Adjusted margin for mobile */
     animation: dance 3s infinite alternate;
 }
 
@@ -59,10 +61,10 @@ h1 { /* Styles for the Categories heading */
 .gender-option button {
     background-color: #d2b48c;
     color: white;
-    padding: 15px 30px;
+    padding: 12px 25px; /* Adjusted button padding for mobile */
     border: none;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Adjusted button font size for mobile */
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-weight: 600;
@@ -70,15 +72,4 @@ h1 { /* Styles for the Categories heading */
 
 .gender-option button:hover {
     background-color: #a0522d;
-}
-
-@media (max-width: 768px) {
-    .gender-container {
-        flex-direction: column;
-        padding: 50px 10px;
-    }
-
-    .gender-option img {
-        max-width: 80%;
-    }
 }
