@@ -44,6 +44,24 @@
         function goBack() {
             window.history.back();
         }
+
+         
+        document.querySelectorAll('.product-link').forEach(link => {
+            let timeout;
+            const tooltip = link.querySelector('.tooltip');
+            
+            link.addEventListener('mouseenter', () => {
+                tooltip.classList.add('show-tooltip');
+                timeout = setTimeout(() => {
+                    tooltip.classList.remove('show-tooltip');
+                }, 3000);
+            });
+        
+            link.addEventListener('mouseleave', () => {
+                clearTimeout(timeout);
+                tooltip.classList.remove('show-tooltip');
+            });
+        });
     </script>
     <script src="male-dresses.js"></script>
 </body>
