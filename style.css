@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #e8e4c9;
-    background: linear-gradient(to bottom, #483D8B, #2F4F4F);
+    background: linear-gradient(to bottom, #5e5888, #24c7c7);
     overflow-x: hidden;
     position: relative;
     line-height: 1.6;
@@ -65,205 +65,124 @@ body {
     100% { transform: translateY(100vh); }
 }
 
-header {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.hero {
+    text-align: center;
+    padding: 80px 15px; /* Adjusted padding for mobile */
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    margin: 0;
-    padding: 0 10px;
+.hero img.hero-image {
+    max-width: 150px; /* Adjusted image size for mobile */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Adjusted margin for mobile */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.logo {
-    font-size: 1.8rem;
+.hero img.hero-image:hover {
+    transform: scale(1.05);
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem; /* Adjusted font size for mobile */
     color: #d2b48c;
-    text-decoration: none;
+    margin-bottom: 15px; /* Adjusted margin for mobile */
     font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-nav {
-    background-color: #483D8B;
-    padding: 5px 0;
+.hero p {
+    font-size: 1.1rem; /* Adjusted font size for mobile */
+    margin-bottom: 25px; /* Adjusted margin for mobile */
+    font-weight: 600;
+    color: #ccc;
+}
+
+.hero button {
+    background-color: #d2b48c;
+    color: white;
+    padding: 14px 25px; /* Adjusted padding for mobile */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem; /* Adjusted font size for mobile */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero button:hover {
+    background-color: #a0522d;
+    transform: translateY(-3px);
+}
+
+.section {
+    padding: 60px 15px; /* Adjusted padding for mobile */
     text-align: center;
 }
 
-nav a {
-    color: #e8e4c9;
-    text-decoration: none;
-    margin: 5px 10px;
-    position: relative;
-    font-size: 1em;
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem; /* Adjusted font size for mobile */
+    color: #d2b48c;
+    margin-bottom: 25px; /* Adjusted margin for mobile */
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.section p {
+    font-size: 1rem; /* Adjusted font size for mobile */
+    margin: 0 auto 25px; /* Adjusted margin for mobile */
+    font-weight: 400;
+    max-width: 100%; /* Adjusted max-width for mobile */
+    color: #ccc;
+    line-height: 1.6; /* Adjusted line-height for mobile */
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
     display: inline-block;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.section ul li {
+    margin-bottom: 12px; /* Adjusted margin for mobile */
+    font-weight: 400;
+    color: #ccc;
+    font-size: 0.95rem; /* Adjusted font size for mobile */
 }
 
-.product-link {
-    position: relative;
-}
-
-.tooltip-container {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
-    width: 90%;
-    margin: 10px auto;
-}
-
-.product-link:hover .tooltip-container {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-    pointer-events: auto;
-}
-
-.tooltip {
-    background-color: white;
-    color: #333;
-    padding: 10px;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.contact {
     text-align: center;
-    width: 100%;
-    white-space: normal;
-    box-sizing: border-box;
-}
-
-.tooltip p {
-    margin-bottom: 10px;
-    font-family: sans-serif;
-}
-
-.tooltip-button {
-    background-color: #483D8B;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: sans-serif;
-}
-
-.tooltip-button:hover {
-    background-color: #2F4F4F;
-}
-
-.back-button-container {
-    position: fixed;
-    top: 5px;
-    left: 5px;
-    z-index: 1000;
-}
-
-.back-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 6px;
-    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    font-size: 0.85em;
-}
-
-.back-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-}
-
-.back-button::before {
-    content: '←';
-    margin-right: 4px;
-    font-size: 0.9em;
-}
-
-.product-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px 10px;
-    max-width: 100%;
-    margin: 0;
-}
-
-.product {
-    text-align: center;
+    padding: 60px 15px; /* Adjusted padding for mobile */
     background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.product h3 {
-    font-size: 1.5rem;
+.contact h2 {
+    font-weight: 700;
+    font-size: 2.3rem; /* Adjusted font size for mobile */
     color: #d2b48c;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Adjusted margin for mobile */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.product p {
-    font-size: 1rem;
-    color: #ccc;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-.product p:last-child {
-    font-weight: 600;
+.contact a {
+    margin: 0 10px; /* Adjusted margin for mobile */
     color: #d2b48c;
-    font-size: 1.1rem;
-}
-
-footer {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0 10px;
-}
-
-footer p {
-    color: #ccc;
-    margin-bottom: 10px;
-}
-
-.social-links a {
-    color: #d2b48c;
-    font-size: 1.3rem;
-    margin: 0 8px;
+    font-size: 1.4rem; /* Adjusted font size for mobile */
     transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+.contact a:hover {
     color: #a0522d;
 }
+
+/* No need for @media (min-width: 1200px) in this case as we're focusing on mobile */
