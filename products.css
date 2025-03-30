@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #e8e4c9;
-    background: linear-gradient(to bottom, #7366c5, #518181);
+    background: linear-gradient(to bottom, #493d94, #539292);
     overflow-x: hidden;
     position: relative;
     line-height: 1.6;
@@ -19,8 +19,8 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack logo and nav vertically on mobile */
+    align-items: center; /* Center items horizontally */
     max-width: 100%;
     margin: 0;
     padding: 0 10px;
@@ -31,12 +31,13 @@ header {
     color: #d2b48c;
     text-decoration: none;
     font-weight: 700;
+    margin-top: 10px; /* Add space between nav and logo */
 }
 
 nav {
     background-color: transparent; /* Make nav background transparent */
-    padding: 0; /* Remove padding from nav */
-    text-align: left; /* Align links to the left */
+    padding: 5px 0; /* Add some padding for spacing */
+    text-align: center; /* Center links horizontally */
 }
 
 nav a {
@@ -122,78 +123,28 @@ nav a:hover {
     100% { transform: translate(100vw, 0); }
 }
 
-header {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
-    font-size: 2rem;
-    color: #d2b48c;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-nav a {
-    color: #ccc;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover, nav a.active {
-    color: #d2b48c;
-}
-
-nav {
-    background-color: #695fa3;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: #e8e4c9;
-    text-decoration: none;
-    margin: 0 20px;
-    position: relative;
-}
-
 /* Updated Cloud-shaped Tooltip */
 .tooltip {
     position: absolute;
     background-color: #d1afc0;
     color: white;
-    border-radius: 50px; /* Large radius for rounded ends */
-    padding: 10px 20px; /* Adjust padding for content */
-    width: auto; /* Allow content to determine width */
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: auto;
     white-space: nowrap;
-    bottom: -70px;
+    bottom: -80px; /* Increased bottom spacing */
     left: 50%;
-    transform: translateX(-100%) translateY(40px);
+    transform: translateX(-50%) translateY(40px);
     opacity: 0;
     transition: opacity 0.4s ease, transform 0.4s ease;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     font-size: 1.1rem;
     pointer-events: none;
     z-index: 101;
-    /* Cloud details */
     border: 2px solid #ffffff30;
     background-image: linear-gradient(145deg, #ca9cb3, #e3bacf);
 }
 
-/* Cloud arrow */
 .tooltip::before {
     content: '';
     position: absolute;
@@ -207,8 +158,7 @@ nav a {
     border-radius: 2px;
 }
 
-/* Cloud puff effect */
-.tooltip::after {
+tooltip::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -218,8 +168,8 @@ nav a {
     top: 5px;
     left: 10px;
     box-shadow: 25px 0 #ffffff15,
-                12px -8px #ffffff15,
-                40px 5px #ffffff15;
+        12px -8px #ffffff15,
+        40px 5px #ffffff15;
 }
 
 .show-tooltip {
@@ -227,27 +177,24 @@ nav a {
     transform: translateX(-50%) translateY(0);
 }
 
-
-
-/* Remove the original hover rule */
 .product-link:hover .tooltip {
     opacity: 0;
 }
 
 .product-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 20px; /* Reduced gap for mobile */
+    padding: 20px 10px; /* Reduced padding for mobile */
+    max-width: 100%; /* Full width on mobile */
+    margin: 0;
 }
 
 .product {
     text-align: center;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px; /* Reduced product padding for mobile */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -258,63 +205,57 @@ nav a {
 
 .product img {
     max-width: 100%;
-    height: 250px;
+    height: auto; /* Auto height on mobile */
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin for mobile */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .product h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Reduced font size for mobile */
     color: #d2b48c;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin for mobile */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .product p {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Reduced font size for mobile */
     color: #ccc;
-    line-height: 1.7;
-    margin-bottom: 20px;
+    line-height: 1.5; /* Reduced line-height for mobile */
+    margin-bottom: 15px; /* Reduced margin for mobile */
 }
 
 .product p:last-child {
     font-weight: 600;
     color: #d2b48c;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Reduced font size for mobile */
 }
 
 footer {
     background: rgba(0, 0, 0, 0.2);
-    padding: 30px 0;
+    padding: 20px 0; /* Reduced padding for mobile */
     text-align: center;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 100%; /* Full width on mobile */
+    margin: 0;
+    padding: 0 10px; /* Reduced padding for mobile */
 }
 
 footer p {
     color: #ccc;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced margin for mobile */
 }
 
 .social-links a {
     color: #d2b48c;
-    font-size: 1.5rem;
-    margin: 0 10px;
+    font-size: 1.3rem; /* Reduced font size for mobile */
+    margin: 0 8px; /* Reduced margin for mobile */
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
     color: #a0522d;
-}
-
-@media (max-width: 768px) {
-    .product-list {
-        grid-template-columns: 1fr;
-    }
 }
